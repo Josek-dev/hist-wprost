@@ -1,1 +1,8 @@
-body { }
+:root {
+    --main-brown-color: #6d4c41;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
