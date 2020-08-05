@@ -16,12 +16,14 @@
     <div id="signin">
         <form method="post" action="login.php" name="admin">
             <label for="login">
-                <input type="text" name="login">
+                <span class="label">Login</span>
+                <input type="text" name="login" placeholder="Wpisz login">
             </label>
             <label for="password">
-                <input type="password" name="password">
+                <span class="label">Hasło</span>
+                <input type="password" name="password" placeholder="Wpisz hasło" >
             </label>
-            <button type="submit">Zaloguj</button>
+            <button type="submit" name="sign">Zaloguj</button>
         </form>
     </div>
 </div>
