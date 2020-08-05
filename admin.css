@@ -13,7 +13,7 @@ body {
     flex-direction: column;
     align-items: center;
     width: 30vw;
-    height: 70vh;
+    height: 50vh;
     background: #ffffff;
     margin: 10vh auto;
     border-radius: 10px;
@@ -23,6 +23,7 @@ body {
 #header {
     display: flex;
     background: none !important;
+    color: var(--main-brown-color);
 }
 
 #signin {
