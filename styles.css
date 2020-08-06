@@ -2,23 +2,26 @@
     --main-brown-color: #6d4c41;
 }
 
-
-
 body {
     margin: 0;
     padding: 0;
-    background: #eee;
+    background: #eeeeee;
+    color: #333333;
+    min-height: 20000px;
+
 }
 
-header {
-    width: 100%;
-    height: 5px;
-    background: var(--main-brown-color);
+.container {
+    width:100%;
+    height: 100%;
 }
+
+
 
 /* RESPONSIVE TYPOGRAPHY */
 html {
     font-size: 14px;
+    scroll-behavior: smooth;
 }
 
 h1 {
@@ -39,4 +42,47 @@ p {
 
 a {
     font-size: 1rem;
+    text-decoration: none;
 }
+
+/* HEADER */
+
+header {
+    width: 100vw;
+    height: 12vh;
+    background: var(--main-brown-color);
+    position: fixed;
+    top:0;
+    box-sizing: border-box;
+    padding: 0.05rem 0.15rem;
+}
+
+#topLeft {
+    margin-left: 2%;
+    height: 3.5rem;
+    width: 3.5rem;
+    background: rgba(0,0,0,0.2);
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 0.9rem;
+}
+
+#arrow {
+    position:relative;
+    top:50%;
+    width: 25%;
+    height: 25%;
+    background: transparent;
+    border-top: 0.3em solid white;
+    border-right: 0.3em solid white;
+    left:40%;
+    transform: translate3d(0,-50%,0) rotate(-135deg);
+}
+
+
+
+
+
+#topRight {}
+
+
