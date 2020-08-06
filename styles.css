@@ -55,9 +55,12 @@ header {
     top:0;
     box-sizing: border-box;
     padding: 0.05rem 0.15rem;
+    display: flex;
+    align-items: center;
 }
 
 #backspace {
+    float: left;
     cursor: pointer;
     margin-left: 2%;
     height: 3.5rem;
@@ -65,7 +68,6 @@ header {
     background: rgba(0,0,0,0.1);
     border-radius: 5px;
     text-align: center;
-    margin-top: 0.9rem;
 }
 @keyframes wprost {
    from { background: rgba(0,0,0,0.1); }
@@ -91,6 +93,13 @@ header {
     transform: translate3d(0,-50%,0) rotate(-135deg);
 }
 
+#title {
+    float: left;
+    width: 150px;
+    height:40px;
+    background: url(logo.png);
+    margin-left: 0.5rem;
+}
 
 
 
