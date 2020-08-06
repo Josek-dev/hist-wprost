@@ -57,15 +57,27 @@ header {
     padding: 0.05rem 0.15rem;
 }
 
-#topLeft {
+#backspace {
+    cursor: pointer;
     margin-left: 2%;
     height: 3.5rem;
     width: 3.5rem;
-    background: rgba(0,0,0,0.2);
+    background: rgba(0,0,0,0.1);
     border-radius: 5px;
     text-align: center;
     margin-top: 0.9rem;
 }
+@keyframes wprost {
+   from { background: rgba(0,0,0,0.1); }
+    to { background: rgba(0,0,0,0.3); }
+}
+
+#backspace:hover {
+    animation-name: wprost;
+    animation-duration: 2s;
+}
+#topLeft{}
+
 
 #arrow {
     position:relative;
