@@ -8,17 +8,10 @@ body {
     background: #eeeeee;
     color: #333333;
     min-height: 20000px;
-    font-family: "Roboto Condensed",Arial,sans-serif;
+    font-family: Roboto, "Roboto Condensed",Arial,sans-serif;
     box-sizing: border-box;
 
 }
-
-.container {
-    width:100%;
-    height: 100%;
-}
-
-
 
 /* RESPONSIVE TYPOGRAPHY */
 html {
@@ -35,16 +28,17 @@ h2 {
 }
 
 h3 {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
 }
 
 p {
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 a {
     font-size: 1rem;
     text-decoration: none;
+    color: inherit;
 }
 
 /* HEADER */
@@ -59,6 +53,7 @@ header {
     padding: 0.05rem 0.15rem;
     display: flex;
     align-items: center;
+    z-index: 8;
 }
 
 .corner-box {
@@ -67,21 +62,24 @@ header {
     background: rgba(0,0,0,0.1);
     border-radius: 5px;
     text-align: center;
-}
-
-#backspace {
     cursor: pointer;
+
 }
 
-@keyframes wprost {
-   from { background: rgba(0,0,0,0.1); }
-    to { background: rgba(0,0,0,0.3); }
-}
-
-#backspace:hover {
-    animation-name: wprost;
+.corner-box:hover {
+    animation-name: corner-box-animation;
     animation-duration: 2s;
 }
+
+/*#backspace {
+
+}*/
+
+@keyframes corner-box-animation {
+   from { background: rgba(0,0,0,0.1); }
+    to { background: rgba(0,0,0,0.4); }
+}
+
 #topLeft{
     display: flex;
     flex-direction: row;
@@ -140,7 +138,6 @@ header {
 #top-menu {
     color:#fff;
     display:inline-flex;
-    background: red;
     list-style: none;
     padding: 0;
 }
@@ -171,6 +168,17 @@ header {
     width: auto;
 }
 
+#subscribe {
+    font-style: normal;
+    color: #ffde00;
+    text-align: center;
+    padding: 0 10px 0 40px;
+    line-height: 50px;
+    font-weight: 600;
+    letter-spacing: 0;
+    text-transform: uppercase;
+}
+
 #log-icon {
     background: url(icon-20-a-user.png);
 
@@ -181,4 +189,155 @@ header {
 #menu-icon{
     background: url(icon-20-a-menu.png);
 }
+#bell-icon {
+    background: url(icon-20-s-bell.png);
+    background-position: 10px center !important;
+}
 
+#top-bar {
+    width: 100%;
+    height: 12vh;
+    background: linear-gradient(to right, #777, #444);
+    margin-top: 12vh;
+    text-align: center;
+    cursor: pointer;
+}
+
+#top-bar p {
+    user-select: none;
+    font-weight: 600;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    color: #fff;
+    line-height: 12vh;
+}
+
+#top-bar strong {
+    color: #ffde00;
+}
+
+#container {
+    width:90vw;
+    height: 100%;
+    margin: 5vh auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.description {
+    padding-top: 5vh;
+    width: 40%;
+    height: auto;
+}
+
+.description h3:hover {
+    text-decoration: underline;
+}
+
+.hotnews {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 60vh;
+}
+
+.transparency{
+    width: 60%;
+    height: 60vh;
+    background: url(img/img1.PNG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right top;
+}
+
+.transparency:before {
+    content: "";
+    display: inline-block;
+    width: 50%;
+    height: 60vh;
+    background-image: linear-gradient(to left,
+    rgba(238, 238, 238, 0) 0%,
+    rgba(238, 238, 238, 0) 10%,
+    rgba(238, 238, 238, 1.0) 100%
+    );
+}
+.gridnews {
+    margin-top: 5vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 1rem;
+}
+
+.gridnews article {
+    display: flex;
+    flex-flow: column;
+    padding: 1rem;
+    margin: 0;
+    background: #ffffff;
+    box-shadow: 1px 1px 3px #cccccc;
+}
+
+.gridnews h3 {
+    font-size: 1.5rem;
+    margin: 4px auto 6px auto;
+    font-weight: 500;
+    line-height: 1.5rem;
+}
+
+.gridnews p {
+    margin:0;
+    font-size: 0.9rem;
+    text-align: justify;
+}
+
+
+#overlay {
+    width: 100%;
+    height: auto;
+    background: rgb(65,46,39);
+    z-index: 9;
+    display: block;
+    box-sizing: border-box;
+}
+
+#overlayNav {
+    width: 90%;
+    height: 90%;
+    margin: 0 auto;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+#overlayNav ul {
+    margin-top: 2%;
+    list-style: none;
+
+}
+#overlayNav>ul>li {
+    padding: 10px 0;
+    margin: 0;
+    float: none;
+}
+#overlayNav a {
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    font-size: 2rem;
+    float:left;
+}
+
+.submenu {
+    display: inline-block;
+    float: right;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.submenu li {
+    display: inline-block;
+    float: none;
+    padding-left: 20px !important;
+    color: #ffffff;
+}
