@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE HTML>
 <html lang="pl">
 <head>
@@ -5,7 +8,6 @@
     <link rel="stylesheet" href="admin.css">
     <script src="jquery-3.5.1.min.js"></script>
     <script src="jquery.popupoverlay.js"></script>
-    <script src="jquery.h5validate.js"></script>
     <script src="code.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -126,7 +128,7 @@
             </ul>
         </nav>
     </div>
-    <!-- Logowanie lub rejestracja -->
+    <!-- Logowanie -->
     <div id="jqpopup">
         <div id="login">
             <div id="header">
@@ -134,16 +136,17 @@
                 <button class="popup_close jqpopup_close" title="Close" aria-label="Close"><span aria-hidden="true">Zamknij</span></button>
             </div>
             <div id="signin">
-                <form method="post" action="admin.php" name="admin">
-                    <label for="name">
+                <?php require_once "login.php"; ?>
+                <form method="post" action="" name="admin">
+                    <label for="nick">
                         <span class="label">Login</span>
-                        <input id="name" type="text" name="name" placeholder="Wpisz login" required>
+                        <input id="nick" type="text" name="name" placeholder="Wpisz login" required>
                     </label>
-                    <label for="password">
+                    <label for="pass">
                         <span class="label">Hasło</span>
-                        <input type="password" name="password" id="password" placeholder="Wpisz hasło"  required >
+                        <input type="password" name="password" id="pass" placeholder="Wpisz hasło"  required >
                     </label>
-                    <button  type="submit" name="sign">Zaloguj</button>
+                    <button id="logging" type="submit" name="sign">Zaloguj</button>
                 </form>
             </div>
         </div>

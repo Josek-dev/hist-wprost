@@ -25,6 +25,7 @@ $(document).ready(function() {
         });
         $('#jqpopup').popup('toggle');
     });
-    $('form').h5Validate();
-    $.h5Validate.addPatterns();
+    $("#logging").click(function() {
+        loginAjax();
+    });
 });
