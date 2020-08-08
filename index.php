@@ -1,6 +1,4 @@
-<?php
-session_start();
-?>
+<?php session_start(); ?>
 <!DOCTYPE HTML>
 <html lang="pl">
 <head>
@@ -130,25 +128,25 @@ session_start();
     </div>
     <!-- Logowanie -->
     <div id="jqpopup">
-        <div id="login">
+        <div id="loglog">
             <div id="header">
                 <h1>Panel administracyjny</h1>
                 <button class="popup_close jqpopup_close" title="Close" aria-label="Close"><span aria-hidden="true">Zamknij</span></button>
             </div>
             <div id="signin">
-                <?php require_once "login.php"; ?>
-                <form method="post" action="" name="admin">
-                    <label for="nick">
+                <form method="post" action="" name="login">
+                    <label for="nickname">
                         <span class="label">Login</span>
-                        <input id="nick" type="text" name="name" placeholder="Wpisz login" required>
+                        <input id="nickname" type="text" name="nickname" placeholder="Wpisz login" required>
                     </label>
-                    <label for="pass">
+                    <label for="password">
                         <span class="label">Hasło</span>
-                        <input type="password" name="password" id="pass" placeholder="Wpisz hasło"  required >
+                        <input type="password" name="password" id="password" placeholder="Wpisz hasło"  required >
                     </label>
                     <button id="logging" type="submit" name="sign">Zaloguj</button>
                 </form>
-            </div>
+                <?php include "login.php"; ?>
+                <script src="login.js"></script>            </div>
         </div>
     </div>
 </body>

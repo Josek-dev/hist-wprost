@@ -1,5 +1,6 @@
 <?php
-if (isset($_SESSION['completed'])) {
-    echo "No tutaj jakas tresc";
-}
+session_start();
+unset($_SESSION['completed']);
+session_destroy();
+//header("Location: index.php");
 ?>
