@@ -2,8 +2,10 @@
 <html lang="pl">
 <head>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="admin.css">
     <script src="jquery-3.5.1.min.js"></script>
     <script src="jquery.popupoverlay.js"></script>
+    <script src="jquery.h5validate.js"></script>
     <script src="code.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -125,35 +127,26 @@
         </nav>
     </div>
     <!-- Logowanie lub rejestracja -->
-    <div id="fade" class="well">
-        <h4>Fade</h4>
-        <p>CSS transitions can be set via options:</p>
-        <pre class="prettyprint">
-<code>$('#fade').popup({
-  transition: 'all 0.3s'
-});</code>
-</pre>
-        <p>Or you can set them directly in CSS:</p>
-        <pre class="prettyprint"><code>$('#fade').popup();</code></pre>
-        <pre class="prettyprint"><code>#fade,
-#fade_wrapper,
-#fade_background {
-  transition: all 0.3s;
-}
-</code>
-</pre>
-        <button class="fade_close scrolllock_open btn btn-success">Next example</button>
+    <div id="jqpopup">
+        <div id="login">
+            <div id="header">
+                <h1>Panel administracyjny</h1>
+                <button class="popup_close jqpopup_close" title="Close" aria-label="Close"><span aria-hidden="true">Zamknij</span></button>
+            </div>
+            <div id="signin">
+                <form method="post" action="admin.php" name="admin">
+                    <label for="name">
+                        <span class="label">Login</span>
+                        <input id="name" type="text" name="name" placeholder="Wpisz login" required>
+                    </label>
+                    <label for="password">
+                        <span class="label">Hasło</span>
+                        <input type="password" name="password" id="password" placeholder="Wpisz hasło"  required >
+                    </label>
+                    <button  type="submit" name="sign">Zaloguj</button>
+                </form>
+            </div>
+        </div>
     </div>
-
-    <script>
-        $(document).ready(function () {
-
-            $('#fade').popup({
-                transition: 'all 0.3s',
-                closebutton: true
-            });
-
-        });
-    </script>
 </body>
 </html>

@@ -17,4 +17,14 @@ $(document).ready(function() {
             $("#top-bar>p").css("margin", "0");
         });
     });
+
+    $("#log-icon").click(function() {
+        $('#fade').popup({
+            transition: 'all 0.3s',
+            closebutton: true
+        });
+        $('#jqpopup').popup('toggle');
+    });
+    $('form').h5Validate();
+    $.h5Validate.addPatterns();
 });
