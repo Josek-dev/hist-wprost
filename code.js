@@ -25,7 +25,4 @@ $(document).ready(function() {
         });
         $('#jqpopup').popup('toggle');
     });
-    $("#logging").click(function() {
-        loginAjax();
-    });
 });

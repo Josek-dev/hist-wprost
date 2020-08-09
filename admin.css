@@ -86,7 +86,7 @@ button {
     height: 25%;
     border-radius: 25px;
     font-weight: 300;
-    font-family: Poppins;
+    font-family: Poppins, Helvetica, sans-serif;
     letter-spacing: 2px;
     font-size: 0.9rem;
     box-shadow: 1px 1px 5px rgba(0,0,0,0.4);
@@ -113,3 +113,4 @@ button:hover {
     float: left;
     font-size: 2rem;
 }
+
