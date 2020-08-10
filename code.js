@@ -1,3 +1,14 @@
+function isIE () {
+    var myNav = navigator.userAgent.toLowerCase();
+    return (myNav.indexOf('msie') != -1 || myNav.indexOf('trident') != -1) ? true : false;
+}
+
+if(isIE()){
+    alert("Twoja przeglądarka nie jest obsługiwana. Zainstaluj Edge!");
+    $(location).attr('href', 'https://www.microsoft.com/pl-pl/edge');
+
+}
+
 $(document).ready(function() {
     $("#backspace" ).click(function() {
         window.location.href = "http://wprost.pl";
@@ -35,4 +46,7 @@ $(document).ready(function() {
     $(function() {
         $('.page-news').lazy();
     });
+    isIE();
 });
+
+
