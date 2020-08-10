@@ -25,4 +25,8 @@ $(document).ready(function() {
         });
         $('#jqpopup').popup('toggle');
     });
+
+    $(function() {
+        $('.page-news').lazy();
+    });
 });
