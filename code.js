@@ -17,6 +17,12 @@ $(document).ready(function() {
             $("#top-bar>p").css("margin", "0");
         });
     });
+    $( "#search-icon" ).click(function() {
+        $( "#overlay-search" ).toggle( "slow", function() {
+            $("#top-bar").css("margin-top", "0");
+            $("#top-bar>p").css("margin", "0");
+        });
+    });
 
     $("#log-icon").click(function() {
         $('#fade').popup({
